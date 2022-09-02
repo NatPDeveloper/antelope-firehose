@@ -1,0 +1,13 @@
+start:
+  args:
+  - merger
+  - relayer
+  - firehose
+  - blockmeta
+  flags: {
+    "skip-checks":true,
+    "merged-filter-truncation-window":"1000",
+    "merger-max-fixable-fork":"1000",
+    "merger-one-block-deletion-threads":"4",
+    "blockmeta-eos-api-upstream-addr":"localhost:9888"
+  }
