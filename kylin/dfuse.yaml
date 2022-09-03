@@ -6,8 +6,8 @@ start:
   - blockmeta
   flags: {
     "skip-checks":true,
-    "merged-filter-truncation-window":"1000",
-    "merger-max-fixable-fork":"1000",
-    "merger-one-block-deletion-threads":"4",
-    "blockmeta-eos-api-upstream-addr":"localhost:9888"
+    "blockmeta-eos-api-upstream-addr":"localhost:9888",
+    "log-level-switcher-listen-addr":"localhost:1066",
+    "merger-batch-mode":"true",
+    "merger-start-block-num":"247506141"
   }
