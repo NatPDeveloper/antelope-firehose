@@ -4,8 +4,7 @@ let health = require('grpc-health-check');
 // Define service status map. Key is the service name, value is the corresponding status.
 // By convention, the empty string "" key represents that status of the entire server.
 const statusMap = {
-  "ServiceFoo": proto.grpc.health.v1.HealthCheckResponse.ServingStatus.SERVING,
-  "ServiceBar": proto.grpc.health.v1.HealthCheckResponse.ServingStatus.NOT_SERVING,
+  "ServiceFirehose": proto.grpc.health.v1.HealthCheckResponse.ServingStatus.SERVING,
   "": proto.grpc.health.v1.HealthCheckResponse.ServingStatus.NOT_SERVING,
 };
 
