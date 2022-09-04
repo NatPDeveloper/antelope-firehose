@@ -3,10 +3,8 @@ start:
   - merger
   - relayer
   - firehose
-  - blockmeta
   flags: {
     "skip-checks":true,
-    "blockmeta-eos-api-upstream-addr":"localhost:9888",
     "log-level-switcher-listen-addr":"localhost:1066",
     "merger-batch-mode":"true",
     "merger-start-block-num":"247506141"
