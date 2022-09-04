@@ -1,0 +1,9 @@
+{
+    "name": "grpc-health-check",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+      "grpc-health-check": "^1.8.0"
+    }
+  }
+  
