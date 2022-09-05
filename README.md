@@ -1,6 +1,8 @@
 # antelope-firehose
 Example repo for bootstrapping antelope based Firehose API
 
+This repo goes with this article: https://medium.com/@NatPDeveloper/antelopes-magic-api-firehose-14dec52b5670
+
 Run in separate windows
 
 ```bash
