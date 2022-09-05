@@ -42,8 +42,8 @@ async function main() {
 
         stream = client.Blocks(
           {
-            start_block_num: 247512420, // UPDATE THESE
-            stop_block_num: 247512425, // UPDATE THESE
+            start_block_num: 247839283, // UPDATE THESE
+            // stop_block_num: 247839288, // UPDATE THESE
             include_filter_expr: 'action == "onblock"',
             // By default, step events received are `new`, `undo` and `irreversible`, for irreversible only, uncommented the following
             // fork_steps: [forkStepIrreversible],
