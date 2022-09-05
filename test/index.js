@@ -42,9 +42,9 @@ async function main() {
 
         stream = client.Blocks(
           {
-            start_block_num: 247839283, // UPDATE THESE
-            // stop_block_num: 247839288, // UPDATE THESE
-            include_filter_expr: 'action == "onblock"',
+            start_block_num: 247883463, // UPDATE THESE
+            // stop_block_num: 247883465, // UPDATE THESE
+            include_filter_expr: `receiver == "natdeveloper"`,
             // By default, step events received are `new`, `undo` and `irreversible`, for irreversible only, uncommented the following
             // fork_steps: [forkStepIrreversible],
           },
@@ -82,8 +82,9 @@ async function main() {
             trace.actionTraces.forEach((actionTrace) => {
               actionCount += 1
 
-              if (actionTrace.receiver === "eosio") {
+              if (actionTrace.receiver === "natdeveloper") {
                 systemActionCount += 1
+                console.log(JSON.stringify(block, null, "  "))
               }
             })
           })
@@ -91,9 +92,6 @@ async function main() {
           console.log(
             `Block #${block.number} (${block.id}, ${step}) - ${transactionCount} Transactions, ${actionCount} Actions (${systemActionCount} System Actions)`
           )
-          if (showFull) {
-            console.log(JSON.stringify(block, null, "  "))
-          }
         })
 
         stream.on("error", (error) => {
