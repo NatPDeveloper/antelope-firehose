@@ -3,9 +3,10 @@ Example repo for bootstrapping antelope based Firehose API
 
 This repo goes with this article: https://medium.com/@NatPDeveloper/antelopes-magic-api-firehose-14dec52b5670
 
-Run in separate windows
+Run in separate windows, assumes a synced nodeos instance.
 
 ```bash
+cd kylin
 dfuseeos purge -f; nodeos --disable-replay-opts | dfuseeos start -c mindreader.yaml
 dfuseeos start
 ```
@@ -16,7 +17,7 @@ Test
 cd test
 npm i
 # update start/stop blocks in index.js
-FIREHOSE_API_ADDR=kylin-firehose.liquidapps.io:443 node index.js
+FIREHOSE_API_ADDR=YOUR_URL_HERE:443 node index.js
 ```
 
 Check health of services
