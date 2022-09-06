@@ -25,13 +25,11 @@ async function main() {
 
   const client = new bstreamService.BlockStreamV2(
     process.env.FIREHOSE_API_ADDR || "eos.firehose.eosnation.io:9000",
-    grpc.credentials.createSsl(), {
+    process.argv[2] == "--insecure" ? grpc.credentials.createInsecure() : grpc.credentials.createSsl(), {
       "grpc.max_receive_message_length": 1024 * 1024 * 100,
       "grpc.max_send_message_length": 1024 * 1024 * 100
     }
   )
-
-  const showFull = process.argv.length > 3 && process.argv[3] == "--full"
 
   try {
     await new Promise(async (resolve, reject) => {

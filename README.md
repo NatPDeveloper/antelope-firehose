@@ -8,6 +8,7 @@ Run in separate windows, assumes a synced nodeos instance.
 ```bash
 cd kylin
 dfuseeos purge -f; nodeos --disable-replay-opts | dfuseeos start -c mindreader.yaml
+# for insecure gRPC add: --firehose-grpc-listen-addr ":13035"
 dfuseeos start
 ```
 
@@ -17,6 +18,7 @@ Test
 cd test
 npm i
 # update start/stop blocks in index.js
+# for insecure gRPC add --insecure
 FIREHOSE_API_ADDR=YOUR_URL_HERE:443 node index.js
 ```
 
